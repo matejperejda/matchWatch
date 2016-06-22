@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- play/pause -->
+    <item
+        android:id="@+id/action_play"
+        android:icon="@drawable/ic_play_arrow_black_24dp"
+        android:title="Play"
+        app:showAsAction="ifRoom" />
+
+    <!-- interruption -->
+    <item
+        android:id="@+id/action_interruption"
+        android:icon="@drawable/ic_report_problem_black_24dp"
+        android:title="Interruption"
+        app:showAsAction="ifRoom" />
+
+    <!-- goal -->
+    <item
+        android:id="@+id/action_goal"
+        android:icon="@drawable/ic_plus_one_black_24dp"
+        android:title="Goal"
+        app:showAsAction="never" />
+
+    <!-- penalty -->
+    <item
+        android:id="@+id/action_penalty"
+        android:icon="@drawable/ic_person_add_black_24dp"
+        android:title="Penalty"
+        app:showAsAction="never" />
+
+</menu>

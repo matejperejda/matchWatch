@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal"
+    android:padding="5dip">
+
+    <!--  ListRow Left sied Thumbnail image -->
+    <LinearLayout
+        android:id="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="5dip"
+        android:background="@drawable/image_bg"
+        android:padding="3dip">
+
+        <TextView
+            android:id="@+id/list_image"
+            android:layout_width="50dip"
+            android:layout_height="50dip" />
+    </LinearLayout>
+
+    <!-- Home Team -->
+    <TextView
+        android:id="@+id/homeTeam_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="HomeTeam"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+    <TextView
+        android:id="@+id/vs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/homeTeam_text"
+        android:text=" - "
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+    <!-- Away Team -->
+    <TextView
+        android:id="@+id/awayTeam_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/vs"
+        android:text="AwayTeam"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+    <TextView
+        android:id="@+id/score_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/homeTeam_text"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="Score: "
+        android:textColor="#343434"
+        android:textSize="10dip" />
+
+    <!-- Home Score -->
+    <TextView
+        android:id="@+id/homeScore_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/homeTeam_text"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/score_text"
+        android:text="Score1"
+        android:textColor="#343434"
+        android:textSize="10dip" />
+
+    <TextView
+        android:id="@+id/:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/homeTeam_text"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/homeScore_text"
+        android:text=" - "
+        android:textColor="#343434"
+        android:textSize="10dip" />
+
+    <!-- Away Score -->
+    <TextView
+        android:id="@+id/awayScore_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/homeTeam_text"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/:"
+        android:text="Score2"
+        android:textColor="#343434"
+        android:textSize="10dip" />
+
+    <!-- Rightend Duration -->
+    <TextView
+        android:id="@+id/dateAndTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/homeTeam_text"
+        android:layout_marginRight="5dip"
+        android:gravity="right"
+        android:text="DD/MM/YYYY / HH:MM"
+        android:textColor="#10bcc9"
+        android:textSize="10dip"
+        android:textStyle="bold" />
+
+    <!-- Rightend Arrow -->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_chevron_right_black_24dp" />
+
+    <!-- Is finished -->
+    <TextView
+        android:id="@+id/isFinished_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/homeScore_text"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="isFinished"
+        android:textColor="#343434"
+        android:textSize="10dip" />
+
+</RelativeLayout>

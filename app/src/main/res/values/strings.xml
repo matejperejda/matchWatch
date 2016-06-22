@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">MatchWatch</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- activity_splash_screen.xml -->
+    <string name="splash_name">Match Watch</string>
+    <string name="splash_title">Portable tool for referee</string>
+    <string name="splash_tap">Tap screen to continue</string>
+
+    <!-- activity_new_match.xml -->
+    <string name="home_team">Home Team</string>
+    <string name="away_team">Away Team</string>
+    <string name="browse_home">Browse home team roster</string>
+    <string name="name">Name:</string>
+    <string name="short_name">Short:</string>
+    <string name="roster_src">Roster source:</string>
+    <string name="referees">Referees</string>
+    <string name="referee_1">Referee no. 1:</string>
+    <string name="referee_2">Referee no. 2:</string>
+    <string name="linesman_1">Linesman no. 1:</string>
+    <string name="linesman_2">Linesman no. 2:</string>
+
+    <!-- main activity -->
+    <string name="fill_empty_rows">Please, fill all empty rows.</string>
+    <string name="filled_text_erased">Filled text will be erased!</string>
+
+    <string name="loading_team_rosters">Loading team rosters...</string>
+
+    <string name="wrong_input">Wrong input</string>
+    <string name="support_format">Support file format: \n number;lastName;firstName;position;shoots;height;weight;DAY_BIRTH;MONTH_BIRTH;YEAR_BIRTH;club</string>
+    <string name="rosters_loaded_success">Team rosters loaded successfully.</string>
+
+    <string name="done">Done</string>
+    <string name="cont">Continue</string>
+    <string name="ok">OK</string>
+
+    <string name="game_is_over">Game is over</string>
+    <string name="game_is_not_over">Not started yet</string>
+
+    <string name="finish">Finish</string>
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+    <string name="ot_settings">OT Time Settings</string>
+
+    <string name="add_interuption">Add interruption</string>
+    <string name="really_pause_time">Do you really want to pause a time?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <string name="add_penalty">Add penalty</string>
+    <string name="penalty">Penalty</string>
+
+    <string name="goal">Goal</string>
+    <string name="add_goal">Add goal</string>
+
+    <string name="period_1">1st</string>
+    <string name="period_2">2nd</string>
+    <string name="period_3">3rd</string>
+    <string name="period_ot">OT</string>
+
+    <string name="period_match_over">Match is over</string>
+
+    <string name="match_aborted">Match will be aborted</string>
+    <string name="browse_away">Browse away team roster</string>
+
+</resources>

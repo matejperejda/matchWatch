@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <com.vipul.hp_hp.timelineview.TimelineView
+        android:id="@+id/time_marker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="30dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="30dp"
+        app:line="@color/colorPrimary"
+        app:line_size="2dp"
+        app:marker_size="25dp" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_gravity="center_vertical">
+        <!--android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical">-->
+
+
+        <!--
+        <TextView
+            android:id="@+id/tx_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:text="Random" /> -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- notification -->
+            <TextView
+                android:id="@+id/notif_tl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="4dp"
+                android:text="Notif"
+                android:textStyle="bold" />
+
+            <!-- type -->
+            <TextView
+                android:id="@+id/type_tl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@+id/notif_tl"
+                android:text="Type" />
+
+            <!-- time -->
+            <TextView
+                android:id="@+id/time_tl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="4dp"
+                android:fontFamily="monospace"
+                android:text="[Time]" />
+
+            <!-- duration -->
+            <TextView
+                android:id="@+id/duration_tl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="4dp"
+                android:text="(Duration)" />
+
+            <!-- team  -->
+            <TextView
+                android:id="@+id/team_tl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/notif_tl"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="4dp"
+                android:text="Team" />
+
+            <!-- player -->
+            <TextView
+                android:id="@+id/player_tl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_below="@+id/type_tl"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@+id/team_tl"
+                android:text="Player" />
+
+            <!-- assist1 -->
+            <TextView
+                android:layout_toRightOf="@id/team_tl"
+                android:id="@+id/playerAssist1_tl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_below="@+id/player_tl"
+                android:text="Assist1" />
+
+            <!-- assist2 -->
+            <TextView
+                android:id="@+id/playerAssist2_tl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/team_tl"
+                android:layout_below="@+id/playerAssist1_tl"
+                android:text="Assist2" />
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

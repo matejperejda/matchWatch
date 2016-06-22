@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="sk.upjs.ics.android.matchwatch">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity
+            android:name=".activities.SplashScreenActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.MainActivity" />
+        <!-- android:theme="@style/AppTheme.NoActionBar" -->
+
+        <activity
+            android:name=".activities.NewMatchActivity"
+            android:label="New Match"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <!-- android:theme="@style/AppTheme" -->
+
+        <activity
+            android:name=".activities.DetailMatchActivity"
+            android:label="Detail Match"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name="com.nononsenseapps.filepicker.FilePickerActivity"
+            android:label="@string/app_name"
+            android:theme="@style/FilePickerTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name=".provider.MatchesContentProvider"
+            android:authorities="sk.upjs.ics.android.matchwatch.provider.MatchesContentProvider"
+            android:enabled="true"
+            android:exported="false" />
+        <provider
+            android:name=".provider.TeamsContentProvider"
+            android:authorities="sk.upjs.ics.android.matchwatch.provider.TeamsContentProvider"
+            android:enabled="true"
+            android:exported="false" />
+        <provider
+            android:name=".provider.MatchesRefereesContentProvider"
+            android:authorities="sk.upjs.ics.android.matchwatch.provider.MatchesRefereesContentProvider"
+            android:enabled="true"
+            android:exported="false" />
+        <provider
+            android:name=".provider.MatchesLinesmenContentProvider"
+            android:authorities="sk.upjs.ics.android.matchwatch.provider.MatchesLinesmenContentProvider"
+            android:enabled="true"
+            android:exported="false" />
+        <provider
+            android:name=".provider.MatchesInterruptionsContentProvider"
+            android:authorities="sk.upjs.ics.android.matchwatch.provider.MatchesInterruptionsContentProvider"
+            android:enabled="true"
+            android:exported="false" />
+        <provider
+            android:name=".provider.InterruptionInfoContentProvider"
+            android:authorities="sk.upjs.ics.android.matchwatch.provider.InterruptionInfoContentProvider"
+            android:enabled="true"
+            android:exported="false" />
+        <provider
+            android:name=".provider.MatchesGoalsContentProvider"
+            android:authorities="sk.upjs.ics.android.matchwatch.provider.MatchesGoalsContentProvider"
+            android:enabled="true"
+            android:exported="false" />
+        <provider
+            android:name=".provider.MatchesPenaltiesContentProvider"
+            android:authorities="sk.upjs.ics.android.matchwatch.provider.MatchesPenaltiesContentProvider"
+            android:enabled="true"
+            android:exported="false" />
+        <provider
+            android:name=".provider.PenaltyInfoContentProvider"
+            android:authorities="sk.upjs.ics.android.matchwatch.provider.PenaltyInfoContentProvider"
+            android:enabled="true"
+            android:exported="false" />
+        <provider
+            android:name=".provider.TeamsPlayersContentProvider"
+            android:authorities="sk.upjs.ics.android.matchwatch.provider.TeamsPlayersContentProvider"
+            android:enabled="true"
+            android:exported="false" />
+        <provider
+            android:name=".provider.TeamsPersonContentProvider"
+            android:authorities="sk.upjs.ics.android.matchwatch.provider.TeamsPersonContentProvider"
+            android:enabled="true"
+            android:exported="false" />
+        <provider
+            android:name=".provider.PersonContentProvider"
+            android:authorities="sk.upjs.ics.android.matchwatch.provider.PersonContentProvider"
+            android:enabled="true"
+            android:exported="false" />
+        <provider
+            android:name=".provider.PlayersContentProvider"
+            android:authorities="sk.upjs.ics.android.matchwatch.provider.PlayersContentProvider"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name=".activities.PlayerListActivity"
+            android:theme="@style/Theme.AppCompat.Light" />
+    </application>
+
+</manifest>
