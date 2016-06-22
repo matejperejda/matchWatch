@@ -52,7 +52,7 @@ public class DetailMatchActivity extends AppCompatActivity {
     private final int ALL_PERIODS = 4;
     private final long COUNT_DOWN_INTERVAL = 100; // 500
 
-    private final int PERIOD_IN_MINUTES = 0; // ZADAT 20 MINUT !!!
+    private final int PERIOD_IN_MINUTES = 1; // ZADAT 20 MINUT !!!
     private final long PERIOD_IN_SECONDS = PERIOD_IN_MINUTES * SIXTY;
     private final long PERIOD_IN_MILLS = PERIOD_IN_SECONDS * THOUSAND;
 

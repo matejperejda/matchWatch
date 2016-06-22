@@ -49,7 +49,7 @@ public class PlayerListActivity extends AppCompatActivity {
 
                 //teamSpinnerPlayerList.getAdapter().
                 // tahat tabulku z dbs
-                //buildTable(position);
+                buildTable(position + 1);
             }
 
             @Override
@@ -89,13 +89,15 @@ public class PlayerListActivity extends AppCompatActivity {
     }
 
     private int[] isMyPlayer(int position) {
-
         Cursor c = getContentResolver().query(Provider.TeamPlayer.CONTENT_URI, null, Provider.TeamPlayer._ID + "=" + position, null, null);
+
+        c.moveToFirst();
         int[] idx = new int[c.getCount()];
+        int i = 0;
 
         while (c.moveToNext()) {
             int mPosition = c.getInt(c.getColumnIndex(Provider.TeamPlayer._ID));
-            int i = 0;
+
             if (mPosition == position) {
                 idx[i] = c.getInt(c.getColumnIndex(Provider.TeamPlayer.PLAYER_ID));
                 i++;
@@ -106,8 +108,6 @@ public class PlayerListActivity extends AppCompatActivity {
     }
 
     private void buildTable(int teamIndex) {
-        Toast.makeText(this, "position: " + teamIndex, Toast.LENGTH_SHORT).show();
-
         initTable();
         Cursor cursor = getContentResolver().query(Provider.Player.CONTENT_URI, null, null, null, null);
 
@@ -142,38 +142,39 @@ public class PlayerListActivity extends AppCompatActivity {
         int[] goodIdx = isMyPlayer(teamIndex);
 
         if (cursor.getCount() > 0) {
+            //for (int i = 0; i < goodIdx.length; i++) {
             while (cursor.moveToNext()) {
                 int id = cursor.getInt(cursor.getColumnIndex(Provider.Player._ID));
 
-                for (int i = 0; i < goodIdx.length; i++) {
-                    if (id == goodIdx[i]) {
-                        int number = cursor.getInt(cursor.getColumnIndex(Provider.Player.NUMBER));
-                        String firstName = cursor.getString(cursor.getColumnIndex(Provider.Player.FIRST_NAME));
-                        String lastName = cursor.getString(cursor.getColumnIndex(Provider.Player.LAST_NAME));
-                        String birth = cursor.getString(cursor.getColumnIndex(Provider.Player.BIRTH_DATE));
-                        String position = cursor.getString(cursor.getColumnIndex(Provider.Player.POSITION));
-                        String shoots = cursor.getString(cursor.getColumnIndex(Provider.Player.SHOOTS));
-                        int height = (int) cursor.getFloat(cursor.getColumnIndex(Provider.Player.HEIGHT));
-                        int weight = cursor.getInt(cursor.getColumnIndex(Provider.Player.WEIGHT));
-                        String club = cursor.getString(cursor.getColumnIndex(Provider.Player.CLUB));
+                // if (id == goodIdx[i]) {
+                int number = cursor.getInt(cursor.getColumnIndex(Provider.Player.NUMBER));
+                String firstName = cursor.getString(cursor.getColumnIndex(Provider.Player.FIRST_NAME));
+                String lastName = cursor.getString(cursor.getColumnIndex(Provider.Player.LAST_NAME));
+                String birth = cursor.getString(cursor.getColumnIndex(Provider.Player.BIRTH_DATE));
+                String position = cursor.getString(cursor.getColumnIndex(Provider.Player.POSITION));
+                String shoots = cursor.getString(cursor.getColumnIndex(Provider.Player.SHOOTS));
+                int height = (int) cursor.getFloat(cursor.getColumnIndex(Provider.Player.HEIGHT));
+                int weight = cursor.getInt(cursor.getColumnIndex(Provider.Player.WEIGHT));
+                String club = cursor.getString(cursor.getColumnIndex(Provider.Player.CLUB));
 
-                        TableRow row = new TableRow(this);
-                        String[] columnText = {String.valueOf(number), lastName, firstName, birth, position, shoots, String.valueOf(height), String.valueOf(weight), club};
+                TableRow row = new TableRow(this);
+                String[] columnText = {String.valueOf(number), lastName, firstName, birth, position, shoots, String.valueOf(height), String.valueOf(weight), club};
 
-                        for (String text : columnText) {
-                            TextView tv = new TextView(this);
-                            tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
-                                    TableRow.LayoutParams.WRAP_CONTENT));
-                            tv.setGravity(Gravity.CENTER);
-                            tv.setTextSize(16);
-                            tv.setPadding(5, 5, 5, 5);
-                            tv.setText(text);
-                            row.addView(tv);
-                        }
-                        listPlayerTableLayout.addView(row);
-                    }
+                for (String text : columnText) {
+                    TextView tv = new TextView(this);
+                    tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
+                            TableRow.LayoutParams.WRAP_CONTENT));
+                    tv.setGravity(Gravity.CENTER);
+                    tv.setTextSize(16);
+                    tv.setPadding(5, 5, 5, 5);
+                    tv.setText(text);
+                    row.addView(tv);
                 }
+
+                listPlayerTableLayout.addView(row);
+                //  }
             }
         }
     }
 }
+
